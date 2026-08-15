@@ -1,18 +1,39 @@
 # TopoCheck Website
 
-Statische Basis für die TopoCheck-Projektwebsite. Sie funktioniert ohne Build-Schritt direkt mit GitHub Pages.
+Statische Projektwebsite für GitHub Pages und die Custom Domain `topocheck.dev`.
 
-## Lokal öffnen
+## Seiten
 
-Die Datei `index.html` doppelt anklicken oder mit der VS-Code-Erweiterung **Live Server** starten.
+- `/` – Homepage mit den wichtigsten Projektinformationen
+- `/playground/` – vorbereitete interaktive Playground-Vorschau
+- `/docs/` – vorbereitete und durchsuchbare Projektdokumentation
 
-## Inhalte anpassen
+## Lokal starten
 
-- Texte und Teamrollen direkt in `index.html` bearbeiten.
-- Farben stehen am Anfang des CSS-Blocks unter `:root`.
-- Teamfotos können später die Initialen-Blöcke ersetzen.
-- Vor der Veröffentlichung eine echte Kontaktadresse und gegebenenfalls Impressum/Datenschutz ergänzen.
+Mit der VS-Code-Erweiterung **Live Server** die Datei `index.html` öffnen oder im Projektordner ausführen:
 
-## GitHub Pages
+```bash
+python -m http.server 8000
+```
 
-Repository unter **Settings → Pages** öffnen, bei **Source** `Deploy from a branch` wählen und anschließend `main` sowie `/ (root)` speichern.
+Danach `http://localhost:8000` öffnen.
+
+## Dateien bearbeiten
+
+- Gemeinsame Grundlagen: `assets/css/base.css`
+- Header, Navigation, Buttons und Footer: `assets/css/components.css`
+- Seitenspezifische Styles: `home.css`, `playground.css`, `docs.css`
+- Scroll-Effekte: `assets/css/animations.css` und `assets/js/animations.js`
+- Mobile Darstellung: `assets/css/responsive.css`
+- Bilder: passende Unterordner in `assets/images/`
+
+## Auf GitHub veröffentlichen
+
+Den gesamten Inhalt in den Root des Repositorys committen. Unter **Settings → Pages** `Deploy from a branch`, `main` und `/ (root)` auswählen. Die Datei `CNAME` verbindet das Projekt mit `topocheck.dev`.
+
+## Vor der Veröffentlichung prüfen
+
+- Teamrollen und Texte aktualisieren
+- echte Teamfotos und Screenshots einfügen
+- Kontakt, Impressum und Datenschutz ergänzen
+- Dokumentationsinhalte mit dem Entwicklungsstand abgleichen
