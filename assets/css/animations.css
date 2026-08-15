@@ -1,1 +1,33 @@
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.reveal-delay{transition-delay:.14s}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.button,.feature-card,.team-card,.path-card{transition:none}}
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.reveal-delay {
+    transition-delay: .14s
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none
+    }
+
+    .button,
+    .feature-card,
+    .team-card,
+    .path-card {
+        transition: none
+    }
+}

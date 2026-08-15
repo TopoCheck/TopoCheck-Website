@@ -1,6 +1,95 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Der zukünftige interaktive TopoCheck Playground."><title>Playground | TopoCheck</title><link rel="icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/base.css"><link rel="stylesheet" href="../assets/css/components.css"><link rel="stylesheet" href="../assets/css/playground.css"><link rel="stylesheet" href="../assets/css/animations.css"><link rel="stylesheet" href="../assets/css/responsive.css"><script src="../assets/js/main.js" defer></script><script src="../assets/js/animations.js" defer></script><script src="../assets/js/playground.js" defer></script></head><body class="subpage">
-<header class="site-header"><a class="brand" href="../"><span class="brand-mark"><i></i><i></i><i></i></span><span>Topo<em>Check</em></span></a><button class="menu-button" type="button" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span></button><nav class="main-nav" id="main-navigation"><a href="../">Home</a><a class="active" href="./">Playground</a><a href="../docs/">Dokumentation</a></nav></header>
-<main><section class="page-hero"><p class="eyebrow"><span></span> IN ENTWICKLUNG</p><h1>TopoCheck <em>Playground.</em></h1><p>Eine Vorschau auf die zukünftige Arbeitsfläche. Hier sollen Netzwerktopologien direkt im Browser erstellt, konfiguriert und geprüft werden.</p></section>
-<section class="playground-shell reveal" aria-label="Playground Vorschau"><aside class="tool-panel"><p class="panel-label">GERÄTE</p><button class="device-tool active" data-device="router"><b>R</b><span>Router</span></button><button class="device-tool" data-device="switch"><b>S</b><span>Switch</span></button><button class="device-tool" data-device="client"><b>PC</b><span>Client</span></button><p class="panel-hint">Gerät auswählen und anschließend auf die Arbeitsfläche klicken.</p></aside><div class="workspace" id="playground-workspace" tabindex="0" aria-label="Topologie-Arbeitsfläche"><div class="workspace-grid"></div><div class="demo-node demo-router"><b>R</b><span>Router-01<small>10.0.0.1</small></span></div><div class="demo-node demo-switch"><b>S</b><span>Switch-01<small>VLAN 10</small></span></div><p class="workspace-empty" id="workspace-message">Vorschau: Klicke auf die Fläche, um ein Gerät hinzuzufügen.</p></div><aside class="property-panel"><p class="panel-label">EIGENSCHAFTEN</p><label>Hostname<input type="text" value="Router-01" disabled></label><label>IPv4-Adresse<input type="text" value="10.0.0.1/24" disabled></label><label>Routing<select disabled><option>OSPF</option></select></label><div class="development-note"><b>Vorschau</b><p>Die Konfigurationslogik wird später mit der Extension verbunden.</p></div></aside><div class="output-panel"><div><span>GENERIERTE KONFIGURATION</span><button type="button" id="clear-playground">Vorschau zurücksetzen</button></div><pre><code>hostname Router-01&#10;interface GigabitEthernet0/0&#10; ip address 10.0.0.1 255.255.255.0&#10; no shutdown</code></pre></div></section>
-<section class="section roadmap"><p class="section-label">GEPLANTE FUNKTIONEN</p><h2>Schritt für Schritt zum<br><em>interaktiven Netzwerklabor.</em></h2><div class="roadmap-grid"><article><span>01</span><h3>Geräte platzieren</h3><p>Router, Switches und Clients per Drag-and-drop anordnen.</p></article><article><span>02</span><h3>Verbindungen erstellen</h3><p>Interfaces verbinden und Netzwerke grafisch abbilden.</p></article><article><span>03</span><h3>Konfiguration erzeugen</h3><p>Gerätespezifische Befehle automatisch generieren.</p></article><article><span>04</span><h3>Fehler erkennen</h3><p>Probleme verständlich markieren und erklären.</p></article></div></section></main>
-<footer class="site-footer"><a class="brand" href="../">Topo<em>Check</em></a><p>Playground · Vorschau</p><p>© <span data-current-year>2026</span></p></footer></body></html>
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Der zukünftige interaktive TopoCheck Playground.">
+    <title>Playground | TopoCheck</title>
+    <link rel="icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/playground.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/animations.js" defer></script>
+    <script src="../assets/js/playground.js" defer></script>
+</head>
+
+<body class="subpage">
+    <header class="site-header"><a class="brand" href="../"><span
+                class="brand-mark"><i></i><i></i><i></i></span><span>Topo<em>Check</em></span></a><button
+            class="menu-button" type="button" aria-label="Navigation öffnen" aria-expanded="false"
+            aria-controls="main-navigation"><span></span><span></span><span></span></button>
+        <nav class="main-nav" id="main-navigation"><a href="../">Home</a><a class="active" href="./">Playground</a><a
+                href="../docs/">Dokumentation</a></nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <p class="eyebrow"><span></span> IN ENTWICKLUNG</p>
+            <h1>TopoCheck <em>Playground.</em></h1>
+            <p>Eine Vorschau auf die zukünftige Arbeitsfläche. Hier sollen Netzwerktopologien direkt im Browser
+                erstellt, konfiguriert und geprüft werden.</p>
+        </section>
+        <section class="playground-shell reveal" aria-label="Playground Vorschau">
+            <aside class="tool-panel">
+                <p class="panel-label">GERÄTE</p><button class="device-tool active"
+                    data-device="router"><b>R</b><span>Router</span></button><button class="device-tool"
+                    data-device="switch"><b>S</b><span>Switch</span></button><button class="device-tool"
+                    data-device="client"><b>PC</b><span>Client</span></button>
+                <p class="panel-hint">Gerät auswählen und anschließend auf die Arbeitsfläche klicken.</p>
+            </aside>
+            <div class="workspace" id="playground-workspace" tabindex="0" aria-label="Topologie-Arbeitsfläche">
+                <div class="workspace-grid"></div>
+                <div class="demo-node demo-router"><b>R</b><span>Router-01<small>10.0.0.1</small></span></div>
+                <div class="demo-node demo-switch"><b>S</b><span>Switch-01<small>VLAN 10</small></span></div>
+                <p class="workspace-empty" id="workspace-message">Vorschau: Klicke auf die Fläche, um ein Gerät
+                    hinzuzufügen.</p>
+            </div>
+            <aside class="property-panel">
+                <p class="panel-label">EIGENSCHAFTEN</p><label>Hostname<input type="text" value="Router-01"
+                        disabled></label><label>IPv4-Adresse<input type="text" value="10.0.0.1/24"
+                        disabled></label><label>Routing<select disabled>
+                        <option>OSPF</option>
+                    </select></label>
+                <div class="development-note"><b>Vorschau</b>
+                    <p>Die Konfigurationslogik wird später mit der Extension verbunden.</p>
+                </div>
+            </aside>
+            <div class="output-panel">
+                <div><span>GENERIERTE KONFIGURATION</span><button type="button" id="clear-playground">Vorschau
+                        zurücksetzen</button></div>
+                <pre><code>hostname Router-01&#10;interface GigabitEthernet0/0&#10; ip address 10.0.0.1 255.255.255.0&#10; no shutdown</code></pre>
+            </div>
+        </section>
+        <section class="section roadmap">
+            <p class="section-label">GEPLANTE FUNKTIONEN</p>
+            <h2>Schritt für Schritt zum<br><em>interaktiven Netzwerklabor.</em></h2>
+            <div class="roadmap-grid">
+                <article><span>01</span>
+                    <h3>Geräte platzieren</h3>
+                    <p>Router, Switches und Clients per Drag-and-drop anordnen.</p>
+                </article>
+                <article><span>02</span>
+                    <h3>Verbindungen erstellen</h3>
+                    <p>Interfaces verbinden und Netzwerke grafisch abbilden.</p>
+                </article>
+                <article><span>03</span>
+                    <h3>Konfiguration erzeugen</h3>
+                    <p>Gerätespezifische Befehle automatisch generieren.</p>
+                </article>
+                <article><span>04</span>
+                    <h3>Fehler erkennen</h3>
+                    <p>Probleme verständlich markieren und erklären.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="../">Topo<em>Check</em></a>
+        <p>Playground · Vorschau</p>
+        <p>© <span data-current-year>2026</span></p>
+    </footer>
+</body>
+
+</html>

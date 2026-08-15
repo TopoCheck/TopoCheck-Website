@@ -1,1 +1,105 @@
-:root{--ink:#0b1220;--muted:#667085;--line:#e4e9f0;--blue:#2477f5;--blue-dark:#125fd3;--cyan:#54d6e8;--green:#35c68f;--soft:#f5f8fc;--white:#fff;--navy:#0d1728;--shadow:0 24px 70px rgba(25,46,80,.16);--radius:16px;--max:1220px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--white);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,select{font:inherit}img{max-width:100%;display:block}h1,h2,h3,p{margin-top:0}h1,h2{letter-spacing:-.045em;line-height:1.06}h1{font-size:clamp(3rem,6vw,5.2rem)}h2{font-size:clamp(2.25rem,4vw,3.9rem)}h1 em,h2 em,.brand em{color:var(--blue);font-style:normal}.section{padding:110px max(6vw,24px)}.soft{background:var(--soft)}.section-label,.panel-label{font:700 .73rem/1.3 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.15em;color:#65758d}.muted{color:var(--muted)}::selection{background:#cfe3ff;color:var(--ink)}:focus-visible{outline:3px solid rgba(36,119,245,.32);outline-offset:3px}
+:root {
+    --ink: #0b1220;
+    --muted: #667085;
+    --line: #e4e9f0;
+    --blue: #2477f5;
+    --blue-dark: #125fd3;
+    --cyan: #54d6e8;
+    --green: #35c68f;
+    --soft: #f5f8fc;
+    --white: #fff;
+    --navy: #0d1728;
+    --shadow: 0 24px 70px rgba(25, 46, 80, .16);
+    --radius: 16px;
+    --max: 1220px
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--ink);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    line-height: 1.6
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button,
+input,
+select {
+    font: inherit
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0
+}
+
+h1,
+h2 {
+    letter-spacing: -.045em;
+    line-height: 1.06
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5.2rem)
+}
+
+h2 {
+    font-size: clamp(2.25rem, 4vw, 3.9rem)
+}
+
+h1 em,
+h2 em,
+.brand em {
+    color: var(--blue);
+    font-style: normal
+}
+
+.section {
+    padding: 110px max(6vw, 24px)
+}
+
+.soft {
+    background: var(--soft)
+}
+
+.section-label,
+.panel-label {
+    font: 700 .73rem/1.3 ui-monospace, SFMono-Regular, Consolas, monospace;
+    letter-spacing: .15em;
+    color: #65758d
+}
+
+.muted {
+    color: var(--muted)
+}
+
+::selection {
+    background: #cfe3ff;
+    color: var(--ink)
+}
+
+:focus-visible {
+    outline: 3px solid rgba(36, 119, 245, .32);
+    outline-offset: 3px
+}
