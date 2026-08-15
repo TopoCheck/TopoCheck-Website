@@ -1,23 +1,34 @@
-/* assets/css/base.css */
-
 :root {
+    /* Schriftarten */
+    --font-main: "Inter", Arial, Helvetica, sans-serif;
+    --font-code: "JetBrains Mono", Consolas, monospace;
+
+    /* Farben */
     --ink: #0b1220;
     --muted: #667085;
     --line: #e4e9f0;
+
     --blue: #2477f5;
     --blue-dark: #125fd3;
     --cyan: #54d6e8;
     --green: #35c68f;
-    --soft: #f5f8fc;
+
     --white: #ffffff;
+    --soft: #f5f8fc;
     --navy: #0d1728;
+
     --surface: #ffffff;
     --surface-secondary: #f5f8fc;
+
     --header-background: rgba(255, 255, 255, 0.92);
+
+    /* Layout */
     --shadow: 0 24px 70px rgba(25, 46, 80, 0.16);
     --radius: 16px;
     --max: 1220px;
 }
+
+/* Dunkelmodus */
 
 [data-theme="dark"] {
     color-scheme: dark;
@@ -25,18 +36,25 @@
     --ink: #edf3fc;
     --muted: #a2afc2;
     --line: #29374c;
+
     --blue: #5a9cff;
     --blue-dark: #3182f6;
     --cyan: #62dbea;
     --green: #50d5a2;
-    --soft: #111b2b;
+
     --white: #0b1321;
+    --soft: #111b2b;
     --navy: #080e19;
+
     --surface: #101a2a;
     --surface-secondary: #111b2b;
+
     --header-background: rgba(11, 19, 33, 0.92);
+
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
 }
+
+/* Allgemeine Einstellungen */
 
 * {
     box-sizing: border-box;
@@ -49,13 +67,18 @@ html {
 
 body {
     margin: 0;
-    background: var(--white);
+
     color: var(--ink);
-    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: var(--white);
+
+    font-family: var(--font-main);
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.6;
+
     transition:
-        background-color 0.25s ease,
-        color 0.25s ease;
+        color 0.25s ease,
+        background-color 0.25s ease;
 }
 
 a {
@@ -65,8 +88,13 @@ a {
 
 button,
 input,
-select {
-    font: inherit;
+select,
+textarea {
+    font-family: var(--font-main);
+}
+
+button {
+    color: inherit;
 }
 
 img {
@@ -74,17 +102,20 @@ img {
     max-width: 100%;
 }
 
+/* Überschriften */
+
 h1,
 h2,
 h3,
-p {
+h4,
+h5,
+h6 {
     margin-top: 0;
-}
 
-h1,
-h2 {
-    line-height: 1.06;
-    letter-spacing: -0.045em;
+    font-family: var(--font-main);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
 }
 
 h1 {
@@ -95,12 +126,59 @@ h2 {
     font-size: clamp(2.25rem, 4vw, 3.9rem);
 }
 
+h3 {
+    letter-spacing: -0.02em;
+}
+
 h1 em,
 h2 em,
 .brand em {
     color: var(--blue);
     font-style: normal;
 }
+
+/* Absätze */
+
+p {
+    margin-top: 0;
+}
+
+/* Technische Schrift */
+
+code,
+pre,
+kbd,
+samp,
+.eyebrow,
+.section-label,
+.panel-label,
+.window-bar,
+.valid-badge,
+.technology-row span,
+.device small,
+.demo-node small,
+.added-node small {
+    font-family: var(--font-code);
+}
+
+code {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+pre {
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.7;
+    tab-size: 4;
+}
+
+pre code {
+    font: inherit;
+}
+
+/* Allgemeine Seitenbereiche */
 
 .section {
     padding: 110px max(6vw, 24px);
@@ -110,21 +188,38 @@ h2 em,
     background: var(--soft);
 }
 
+/* Kleine Beschriftungen */
+
 .section-label,
 .panel-label {
     color: #65758d;
-    font: 700 0.73rem/1.3 ui-monospace, SFMono-Regular, Consolas, monospace;
+
+    font-family: var(--font-code);
+    font-size: 0.73rem;
+    font-weight: 600;
+    line-height: 1.3;
     letter-spacing: 0.15em;
+}
+
+.eyebrow {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
 }
 
 .muted {
     color: var(--muted);
 }
 
+/* Textauswahl */
+
 ::selection {
-    background: #cfe3ff;
     color: #0b1220;
+    background: #cfe3ff;
 }
+
+/* Tastaturfokus */
 
 :focus-visible {
     outline: 3px solid rgba(36, 119, 245, 0.32);
@@ -134,7 +229,10 @@ h2 em,
 /* Dunkelmodus: Homepage */
 
 [data-theme="dark"] .hero {
-    background: linear-gradient(145deg, #0b1321 55%, #101d31);
+    background:
+        linear-gradient(145deg,
+            #0b1321 55%,
+            #101d31);
 }
 
 [data-theme="dark"] .feature-card,
@@ -145,18 +243,32 @@ h2 em,
     border-color: var(--line);
 }
 
-[data-theme="dark"] .feature-symbol {
+[data-theme="dark"] .feature-card:hover,
+[data-theme="dark"] .team-card:hover {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme="dark"] .feature-card i {
+    color: var(--blue);
     background: rgba(90, 156, 255, 0.12);
 }
 
 [data-theme="dark"] .path-card:not(.dark) {
-    background: linear-gradient(145deg, #101a2a, #142238);
+    background:
+        linear-gradient(145deg,
+            #101a2a,
+            #142238);
+
     border-color: var(--line);
 }
 
 [data-theme="dark"] .team-card div {
-    background: linear-gradient(145deg, #172a43, #1c3658);
     color: #76adff;
+
+    background:
+        linear-gradient(145deg,
+            #172a43,
+            #1c3658);
 }
 
 /* Dunkelmodus: Playground */
@@ -212,6 +324,8 @@ h2 em,
     color: #f9cb69;
     background: rgba(249, 203, 105, 0.12);
 }
+
+/* Bewegungen reduzieren */
 
 @media (prefers-reduced-motion: reduce) {
     html {
