@@ -60,7 +60,7 @@
     overflow: hidden;
     box-shadow: 0 22px 55px rgba(5, 24, 49, .22), 0 0 24px rgba(36, 119, 245, .12);
     transform: perspective(1000px) rotateY(-2deg);
-    transition: transform .6s ease-in-out, box-shadow 1.2s ease-in-out, border-color 1.1s ease-in-out
+    transition: transform .35s ease-in-out, box-shadow .9s ease-in-out, border-color .9s ease-in-out
 }
 
 .topology-window:hover {
