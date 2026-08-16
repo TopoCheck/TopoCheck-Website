@@ -67,7 +67,8 @@ button:not(:disabled):hover {
     .feature-card,
     .team-card,
     .path-card,
-    .device-tool {
+    .device-tool,
+    .technology-row span {
         transition: none
     }
 }

@@ -296,7 +296,7 @@
 }
 
 .feature-card>span {
-    font: 11px ui-monospace, monospace;
+    font: 700 14px ui-monospace, monospace;
     color: #93a0b2
 }
 
@@ -335,7 +335,17 @@
     background: white;
     border: 1px solid var(--line);
     border-radius: 7px;
-    font: 11px ui-monospace, monospace
+    font: 11px ui-monospace, monospace;
+    cursor: default;
+    transition: color .45s ease-in-out, background-color .45s ease-in-out, border-color .45s ease-in-out, transform .45s ease-in-out, box-shadow .45s ease-in-out
+}
+
+.technology-row span:hover {
+    color: var(--blue);
+    background: var(--surface);
+    border-color: rgba(36, 119, 245, .55);
+    box-shadow: 0 10px 24px rgba(36, 119, 245, .14);
+    transform: translateY(-4px);
 }
 
 .path-grid {
