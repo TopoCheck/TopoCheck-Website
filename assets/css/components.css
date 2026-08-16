@@ -55,11 +55,11 @@
 
 .site-header .brand > span {
     display: inline-block;
-    background: linear-gradient(90deg, #ffffff 15%, #3eb8ff 48%, #ffffff 82%);
-    background-size: 220% 100%;
+    background: repeating-linear-gradient(90deg, #ffffff 0%, #ffffff 25%, #3eb8ff 50%, #ffffff 75%, #ffffff 100%);
+    background-size: 200% 100%;
     background-clip: text;
     color: transparent;
-    animation: brand-motion 3.2s ease-in-out infinite;
+    animation: brand-motion 4s linear infinite;
 }
 
 .site-header .brand em {
@@ -67,13 +67,11 @@
 }
 
 @keyframes brand-motion {
-    0%, 100% {
-        transform: translateY(0);
-        background-position: 100% 50%;
+    from {
+        background-position: 200% 50%;
     }
 
-    50% {
-        transform: translateY(-3px);
+    to {
         background-position: 0 50%;
     }
 }
