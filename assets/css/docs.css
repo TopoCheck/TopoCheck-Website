@@ -132,3 +132,66 @@
     background: var(--soft);
     border-radius: 10px
 }
+
+/* Gut lesbare Dokumentation im Dunkelmodus */
+
+[data-theme="dark"] .docs-content h1,
+[data-theme="dark"] .docs-content h2,
+[data-theme="dark"] .docs-content h3,
+[data-theme="dark"] .docs-search label {
+    color: #f2f6fc;
+}
+
+[data-theme="dark"] .docs-content p,
+[data-theme="dark"] .docs-content li {
+    color: #bdc8d8;
+}
+
+[data-theme="dark"] .docs-content strong {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .docs-sidebar nav p {
+    color: #95a6bc;
+}
+
+[data-theme="dark"] .docs-sidebar nav a {
+    color: #b3bfd0;
+}
+
+[data-theme="dark"] .docs-sidebar nav a:hover,
+[data-theme="dark"] .docs-sidebar nav a.active {
+    color: #79adff;
+    background: rgba(90, 156, 255, .15);
+}
+
+[data-theme="dark"] .docs-search input {
+    color: #edf3fc;
+    background: #101a2a;
+    border-color: #34445c;
+}
+
+[data-theme="dark"] .docs-search input::placeholder {
+    color: #8797ad;
+}
+
+[data-theme="dark"] .info-box {
+    color: #d7e1ee;
+    background: #111f33;
+}
+
+[data-theme="dark"] .info-box p {
+    color: #c4d0df;
+}
+
+[data-theme="dark"] .doc-tags span {
+    color: #dce6f3;
+    background: #101a2a;
+    border-color: #34445c;
+}
+
+[data-theme="dark"] .docs-content pre {
+    color: #d9e6f7;
+    background: #070d17;
+    border: 1px solid #26364c;
+}
