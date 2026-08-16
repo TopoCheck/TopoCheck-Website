@@ -125,15 +125,15 @@
     background: linear-gradient(135deg, #2477f5, #20b8eb);
     border: 1px solid rgba(152, 222, 255, .85);
     border-radius: 10px;
-    box-shadow: 0 7px 18px rgba(36, 119, 245, .24), 0 0 8px rgba(32, 184, 235, .14);
+    box-shadow: 0 7px 18px rgba(36, 119, 245, .16), 0 0 8px rgba(32, 184, 235, .1);
     font: 800 12px var(--font-main);
     letter-spacing: .01em;
     transition: transform .35s ease-in-out, box-shadow .9s ease-in-out, filter .9s ease-in-out;
 }
 
 .topology-window:hover .preview-playground {
-    box-shadow: 0 14px 34px rgba(36, 119, 245, .58), 0 0 24px rgba(32, 184, 235, .45);
-    filter: brightness(1.1);
+    box-shadow: 0 12px 30px rgba(36, 119, 245, .32), 0 0 18px rgba(32, 184, 235, .24);
+    filter: brightness(1.04);
 }
 
 .preview-playground:hover {
