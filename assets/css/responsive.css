@@ -25,16 +25,19 @@
         display: flex
     }
 
-    .main-nav a {
-        padding: 11px 12px
+    .main-nav a,
+    .main-nav a.active {
+        padding: 11px 12px;
+        color: var(--blue)
     }
 
     .main-nav a.nav-home {
         color: var(--blue);
     }
 
-    [data-theme="dark"] .main-nav a.nav-home {
-        color: #ffffff;
+    .main-nav a.nav-home::after {
+        content: "Home";
+        margin-left: 7px;
     }
 
     .hero {
