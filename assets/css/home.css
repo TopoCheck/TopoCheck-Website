@@ -410,9 +410,9 @@
 
 .team-photo {
     display: block;
-    width: 100%;
+    width: 84%;
     height: auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
     border-radius: 12px;
 }
 
