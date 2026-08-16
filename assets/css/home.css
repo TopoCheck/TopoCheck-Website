@@ -324,7 +324,7 @@
 
 .technology-row {
     max-width: var(--max);
-    margin: 26px auto 0;
+    margin: 10px auto 0;
     display: flex;
     gap: 8px;
     flex-wrap: wrap
@@ -406,6 +406,14 @@
     color: #3d78c7;
     font-size: 2.5rem;
     font-weight: 800
+}
+
+.technology-note {
+    max-width: var(--max);
+    margin: 28px auto 0;
+    color: var(--muted);
+    font-size: .86rem;
+    font-weight: 600;
 }
 
 .team-photo {
