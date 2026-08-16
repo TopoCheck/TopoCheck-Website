@@ -10,7 +10,7 @@
         left: 18px;
         right: 18px;
         padding: 12px;
-        background: #fff;
+        background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 12px;
         box-shadow: var(--shadow);
