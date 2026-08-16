@@ -428,7 +428,7 @@
 .contact-section {
     padding: 115px 24px;
     text-align: center;
-    background: linear-gradient(135deg, #1677e8, #22a7e8);
+    background: linear-gradient(135deg, #0b438c, #087694);
     color: #fff
 }
 
@@ -452,4 +452,12 @@
     color: #0b5fbb;
     background: #fff;
     border-color: #fff
+}
+
+.contact-section .button:hover {
+    color: #073f72;
+    background: #eaf6ff;
+    border-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(1, 22, 53, .3), 0 0 16px rgba(183, 231, 255, .3);
+    filter: brightness(1);
 }
