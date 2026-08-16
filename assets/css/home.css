@@ -369,7 +369,7 @@
 .contact-section {
     padding: 115px 24px;
     text-align: center;
-    background: var(--navy);
+    background: linear-gradient(135deg, #1677e8, #22a7e8);
     color: #fff
 }
 
@@ -382,9 +382,15 @@
 }
 
 .contact-section>p:not(.section-label) {
-    color: #9faec4
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgba(255, 255, 255, .82)
 }
 
 .contact-section .button {
-    margin-top: 15px
+    margin-top: 20px;
+    color: #0b5fbb;
+    background: #fff;
+    border-color: #fff
 }

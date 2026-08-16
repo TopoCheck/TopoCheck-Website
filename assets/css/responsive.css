@@ -91,18 +91,12 @@
     }
 
     .site-footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 12px
+        grid-template-columns: repeat(2, 1fr);
+        gap: 38px
     }
 
     .site-footer .brand {
-        justify-content: center
-    }
-
-    .site-footer p:nth-child(2),
-    .site-footer p:last-child {
-        text-align: center
+        justify-content: flex-start
     }
 }
 
@@ -113,6 +107,11 @@
 
     .section {
         padding: 78px 22px
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        gap: 34px;
     }
 
     .hero {
