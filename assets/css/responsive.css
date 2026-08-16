@@ -7,8 +7,10 @@
         display: none;
         position: absolute;
         top: 67px;
-        left: 18px;
+        left: auto;
         right: 18px;
+        width: max-content;
+        max-width: calc(100vw - 36px);
         padding: 12px;
         background: var(--surface);
         border: 1px solid var(--line);
@@ -25,6 +27,14 @@
 
     .main-nav a {
         padding: 11px 12px
+    }
+
+    .main-nav a.nav-home {
+        color: var(--blue);
+    }
+
+    [data-theme="dark"] .main-nav a.nav-home {
+        color: #ffffff;
     }
 
     .hero {
