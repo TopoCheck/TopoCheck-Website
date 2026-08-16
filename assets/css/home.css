@@ -99,6 +99,34 @@
     background-size: 25px 25px
 }
 
+.preview-playground {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    color: #ffffff;
+    background: #2477f5;
+    border: 1px solid #5799ff;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(36, 119, 245, .3);
+    font: 700 10px ui-monospace, monospace;
+    transition: transform .2s ease, background-color .2s ease;
+}
+
+.preview-playground:hover {
+    color: #ffffff;
+    background: #3d8aff;
+    transform: translateY(-2px);
+}
+
+.preview-playground span {
+    font-size: 14px;
+}
+
 .device {
     position: absolute;
     z-index: 2;
