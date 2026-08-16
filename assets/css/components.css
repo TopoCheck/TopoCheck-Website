@@ -41,11 +41,9 @@
 .brand-logo {
     width: 38px;
     height: 38px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
     image-rendering: auto;
-    filter: contrast(1.12) saturate(1.12);
-    box-shadow: 0 0 18px rgba(25, 210, 238, .2);
 }
 
 .site-header .brand-logo {
