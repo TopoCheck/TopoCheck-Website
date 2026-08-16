@@ -411,12 +411,9 @@
 .team-photo {
     display: block;
     width: 100%;
-    height: 240px;
+    height: auto;
     margin-bottom: 20px;
-    object-fit: contain;
-    object-position: center;
-    background: linear-gradient(145deg, #e9f2fe, #d9e8fb);
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .team-card h3 {
