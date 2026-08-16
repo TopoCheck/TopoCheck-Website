@@ -13,6 +13,22 @@
     transition-delay: .14s
 }
 
+/* Einheitlicher, weicher Leuchteffekt für alle Schaltflächen */
+
+.button,
+button {
+    transition-property: color, background-color, border-color, transform, box-shadow, filter;
+    transition-duration: .9s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.button:hover,
+button:not(:disabled):hover {
+    box-shadow: 0 14px 34px rgba(36, 119, 245, .42), 0 0 24px rgba(32, 184, 235, .34);
+    filter: brightness(1.06);
+}
+
 @media(prefers-reduced-motion:reduce) {
     html {
         scroll-behavior: auto
@@ -25,6 +41,7 @@
     }
 
     .button,
+    button,
     .feature-card,
     .team-card,
     .path-card {
