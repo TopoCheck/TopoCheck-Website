@@ -39,6 +39,19 @@
     margin-right: 5px
 }
 
+.hero-logo-showcase {
+    width: min(100%, 520px);
+    justify-self: center;
+}
+
+.hero-logo-showcase img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 28px;
+    box-shadow: 0 28px 70px rgba(5, 24, 49, .24);
+}
+
 .topology-window {
     height: 455px;
     background: var(--navy);

@@ -31,7 +31,8 @@
         grid-template-columns: 1fr
     }
 
-    .topology-window {
+    .topology-window,
+    .hero-logo-showcase {
         max-width: 680px;
         width: 100%;
         justify-self: center;
@@ -134,6 +135,10 @@
 
     .topology-window {
         height: 375px
+    }
+
+    .hero-logo-showcase {
+        max-width: 440px;
     }
 
     .device {
