@@ -53,27 +53,31 @@
     height: 46px;
 }
 
-.site-header .brand > span {
+.site-header .brand-text {
+    display: flex;
+    gap: .02em;
+}
+
+.site-header .brand-text > span {
     display: inline-block;
-    background: repeating-linear-gradient(90deg, #ffffff 0%, #ffffff 25%, #3eb8ff 50%, #ffffff 75%, #ffffff 100%);
-    background-size: 200% 100%;
+    background: linear-gradient(90deg, #ffffff, #3eb8ff);
     background-clip: text;
     color: transparent;
-    animation: brand-motion 4s linear infinite;
+    animation: brand-float 6s ease-in-out infinite;
 }
 
-.site-header .brand em {
-    color: inherit;
-}
+.site-header .brand-text > span:nth-child(2) { animation-delay: .3s; }
+.site-header .brand-text > span:nth-child(3) { animation-delay: .6s; }
+.site-header .brand-text > span:nth-child(4) { animation-delay: .9s; }
+.site-header .brand-text > span:nth-child(5) { animation-delay: 1.2s; }
+.site-header .brand-text > span:nth-child(6) { animation-delay: 1.5s; }
+.site-header .brand-text > span:nth-child(7) { animation-delay: 1.8s; }
+.site-header .brand-text > span:nth-child(8) { animation-delay: 2.1s; }
+.site-header .brand-text > span:nth-child(9) { animation-delay: 2.4s; }
 
-@keyframes brand-motion {
-    from {
-        background-position: 200% 50%;
-    }
-
-    to {
-        background-position: 0 50%;
-    }
+@keyframes brand-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Hauptnavigation */
@@ -536,7 +540,7 @@
         transition: none;
     }
 
-    .site-header .brand > span {
+    .site-header .brand-text > span {
         animation: none;
     }
 }
