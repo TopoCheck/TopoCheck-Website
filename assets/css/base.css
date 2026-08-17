@@ -111,8 +111,8 @@ body {
 
 .ambient-background::before {
     background:
-        radial-gradient(360px circle at var(--ambient-x) var(--ambient-y), rgba(36, 119, 245, .065), transparent 68%),
-        radial-gradient(520px circle at var(--ambient-lag-x) var(--ambient-lag-y), rgba(84, 214, 232, .04), transparent 72%);
+        radial-gradient(42px circle at var(--ambient-x) var(--ambient-y), rgba(36, 119, 245, .075), transparent 72%),
+        radial-gradient(68px circle at var(--ambient-lag-x) var(--ambient-lag-y), rgba(84, 214, 232, .035), transparent 76%);
 }
 
 .ambient-background::after {
@@ -123,7 +123,7 @@ body {
         var(--ambient-grid-x) var(--ambient-grid-y),
         var(--ambient-grid-x) var(--ambient-grid-y);
     background-size: 52px 52px;
-    mask-image: radial-gradient(430px circle at var(--ambient-x) var(--ambient-y), #000, transparent 78%);
+    mask-image: radial-gradient(58px circle at var(--ambient-x) var(--ambient-y), #000, transparent 82%);
 }
 
 body.ambient-active .ambient-background::before {
@@ -136,8 +136,8 @@ body.ambient-active .ambient-background::after {
 
 [data-theme="dark"] .ambient-background::before {
     background:
-        radial-gradient(380px circle at var(--ambient-x) var(--ambient-y), rgba(49, 130, 246, .09), transparent 68%),
-        radial-gradient(560px circle at var(--ambient-lag-x) var(--ambient-lag-y), rgba(84, 214, 232, .05), transparent 72%);
+        radial-gradient(42px circle at var(--ambient-x) var(--ambient-y), rgba(49, 130, 246, .1), transparent 72%),
+        radial-gradient(68px circle at var(--ambient-lag-x) var(--ambient-lag-y), rgba(84, 214, 232, .045), transparent 76%);
 }
 
 [data-theme="dark"] .ambient-background {
