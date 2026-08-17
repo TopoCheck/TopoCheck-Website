@@ -6,65 +6,6 @@ const menuButton = document.querySelector(".menu-button");
 const navigation = document.querySelector(".main-nav");
 const siteHeader = document.querySelector(".site-header");
 
-function createAmbientBackground() {
-  if (
-    !window.matchMedia("(hover: hover) and (pointer: fine)").matches ||
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  ) {
-    return;
-  }
-
-  const ambient = document.createElement("div");
-  ambient.className = "ambient-background";
-  ambient.setAttribute("aria-hidden", "true");
-  document.body.prepend(ambient);
-
-  let targetX = window.innerWidth / 2;
-  let targetY = window.innerHeight * 0.35;
-  let currentX = targetX;
-  let currentY = targetY;
-  let lagX = targetX;
-  let lagY = targetY;
-  let animationFrame = 0;
-
-  const animateAmbient = () => {
-    currentX += (targetX - currentX) * 0.16;
-    currentY += (targetY - currentY) * 0.16;
-    lagX += (targetX - lagX) * 0.045;
-    lagY += (targetY - lagY) * 0.045;
-
-    ambient.style.setProperty("--ambient-x", `${currentX}px`);
-    ambient.style.setProperty("--ambient-y", `${currentY}px`);
-    ambient.style.setProperty("--ambient-lag-x", `${lagX}px`);
-    ambient.style.setProperty("--ambient-lag-y", `${lagY}px`);
-    ambient.style.setProperty("--ambient-grid-x", `${lagX * 0.025}px`);
-    ambient.style.setProperty("--ambient-grid-y", `${lagY * 0.025}px`);
-
-    if (
-      Math.abs(targetX - lagX) > 0.1 ||
-      Math.abs(targetY - lagY) > 0.1
-    ) {
-      animationFrame = requestAnimationFrame(animateAmbient);
-    } else {
-      animationFrame = 0;
-    }
-  };
-
-  window.addEventListener("pointermove", (event) => {
-    targetX = event.clientX;
-    targetY = event.clientY;
-    document.body.classList.add("ambient-active");
-
-    if (!animationFrame) {
-      animationFrame = requestAnimationFrame(animateAmbient);
-    }
-  }, { passive: true });
-
-  document.documentElement.addEventListener("mouseleave", () => {
-    document.body.classList.remove("ambient-active");
-  });
-}
-
 function getPreferredTheme() {
   const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
 
@@ -156,7 +97,6 @@ function createThemeButton() {
 
 createThemeButton();
 applyTheme(getPreferredTheme());
-createAmbientBackground();
 
 menuButton?.addEventListener("click", () => {
   const open = navigation.classList.toggle("open");
