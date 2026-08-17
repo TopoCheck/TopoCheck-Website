@@ -153,8 +153,13 @@
         max-width: 440px;
     }
 
+    .topology-graph {
+        inset-inline: 8px
+    }
+
     .device {
-        transform: scale(.8)
+        width: 104px;
+        padding: 8px
     }
 
     .router,
@@ -163,11 +168,11 @@
     }
 
     .client-a {
-        left: 1%
+        left: calc(20% - 52px)
     }
 
     .client-b {
-        right: 1%
+        left: calc(80% - 52px)
     }
 
     .feature-grid,

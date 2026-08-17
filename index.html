@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="assets/css/components.css?v=20260817-3">
 
-    <link rel="stylesheet" href="assets/css/home.css?v=20260816-17">
+    <link rel="stylesheet" href="assets/css/home.css?v=20260817-18">
 
     <link rel="stylesheet" href="assets/css/animations.css?v=20260816-4">
 
@@ -61,13 +61,19 @@
             </div>
             <div class="topology-window reveal" aria-label="Vorschau der TopoCheck Extension">
                 <div class="window-bar"><i></i><i></i><i></i><span>topology.topocheck</span></div>
-                <div class="topology-canvas"><span class="wire wire-a"></span><span class="wire wire-b"></span><span
-                        class="wire wire-c"></span>
+                <div class="topology-canvas">
                     <a class="preview-playground" href="playground/">Playground testen <span>→</span></a>
-                    <div class="device router"><b>R</b><span>Router-01<small>10.0.0.1</small></span></div>
-                    <div class="device switch"><b>S</b><span>Switch-01<small>VLAN 10</small></span></div>
-                    <div class="device client client-a"><b>PC</b><span>Client-01<small>10.0.10.11</small></span></div>
-                    <div class="device client client-b"><b>PC</b><span>Client-02<small>10.0.10.12</small></span></div>
+                    <div class="topology-graph">
+                        <svg class="topology-wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                            <line x1="50" y1="18" x2="50" y2="50"></line>
+                            <line x1="50" y1="50" x2="20" y2="84"></line>
+                            <line x1="50" y1="50" x2="80" y2="84"></line>
+                        </svg>
+                        <div class="device router"><b>R</b><span>Router-01<small>10.0.0.1</small></span></div>
+                        <div class="device switch"><b>S</b><span>Switch-01<small>VLAN 10</small></span></div>
+                        <div class="device client client-a"><b>PC</b><span>Client-01<small>10.0.10.11</small></span></div>
+                        <div class="device client client-b"><b>PC</b><span>Client-02<small>10.0.10.12</small></span></div>
+                    </div>
                     <span class="valid-badge">✓ Konfiguration gültig</span>
                 </div>
             </div>
