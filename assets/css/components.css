@@ -317,7 +317,7 @@
 /* Unterseiten-Header */
 
 .page-hero {
-    max-width: 1000px;
+    max-width: 1250px;
     padding: 90px max(7vw, 24px) 60px;
 }
 
@@ -326,7 +326,7 @@
 }
 
 .page-hero>p:last-child {
-    max-width: 760px;
+    max-width: 1000px;
 
     color: var(--muted);
 
