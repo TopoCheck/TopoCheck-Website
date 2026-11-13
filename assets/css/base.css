@@ -248,11 +248,6 @@ pre code {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
-[data-theme="dark"] .feature-card i {
-    color: var(--blue);
-    background: rgba(90, 156, 255, 0.12);
-}
-
 [data-theme="dark"] .path-card:not(.dark) {
     background:
         linear-gradient(145deg,

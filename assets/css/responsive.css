@@ -52,24 +52,10 @@
         transform: none
     }
 
-    .intro {
-        grid-template-columns: 1fr;
-        gap: 20px
-    }
-
-    .intro-copy {
-        padding-top: 0
-    }
-
     .feature-grid,
     .team-grid,
     .roadmap-grid {
         grid-template-columns: 1fr 1fr
-    }
-
-    .section-heading {
-        align-items: start;
-        flex-direction: column
     }
 
     .path-grid {
@@ -154,7 +140,7 @@
     }
 
     .topology-graph {
-        inset-inline: 8px
+        margin-inline: 8px
     }
 
     .device {
